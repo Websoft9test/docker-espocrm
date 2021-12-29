@@ -55,7 +55,11 @@ services:
     entrypoint: docker-websocket.sh
     ports:
       - 8081:8080
-
+      
+networks:
+  default:
+      name: ${APP_NETWORK}
+      
 volumes:
   mysql:
   espocrm:
