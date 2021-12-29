@@ -10,14 +10,14 @@ This repository is an **Cloud Native solution** powered by [Websoft9](https://ww
 
 ## System Requirements
 
-The following are the minimal [recommended requirements](https://github.com/onlyoffice/docker#recommended-system-requirements):
+The following are the minimal [recommended requirements](https://docs.espocrm.com/administration/server-configuration/):
 
 * **OS**: Red Hat, CentOS, Debian, Ubuntu or other's Linux OS
 * **Public Cloud**: More than 20+ major Cloud such as AWS, Azure, Google Cloud, Alibaba Cloud, HUAWEIClOUD, Tencent Cloud
 * **Private Cloud**: KVM, VMware, VirtualBox, OpenStack
 * **ARCH**:  Linux x86-64, ARM 32/64, Windows x86-64, IBM POWER8, x86/i686
-* **RAM**: 4 GB or more
-* **CPU**: 2 cores or higher
+* **RAM**: 1 GB or more
+* **CPU**: 1 cores or higher
 * **HDD**: at least 20 GB of free space
 * **Swap file**: at least 2 GB
 * **bandwidth**: more fluent experience over 100M  
@@ -61,15 +61,12 @@ sudo systemctl start docker
 
 #### Install ONLYOFFICE
 
-We assume that you are already familiar with Docker, and you can modify [docker-compose file](docker-compose-production.yml) by yourself
+We assume that you are already familiar with Docker, and you can modify [docker-compose file](docker-compose.yml) by yourself
 
 ```
 git clone --depth=1 https://github.com/Websoft9/docker-template
 cd docker-template
-echo aaa  
-echo bbb  
 # .env file's [SITE_NAME] should  be changed to public IP or domain name to be accessed by Internet  
-# The default startup is erpnext12. If you want to run erpnext13, you only need to change ERPNEXT_VERSION/FRAPPE_VERSIO to V13  
 docker-compose  up -d
 ```
 
@@ -81,15 +78,9 @@ Yes, you should modify all database password and application password at docker-
 #### Docker runing failed for the reason that port conflict?
 You should modify ports at [docker-compose file](docker-compose-production.yml) and docker-compose again
 
-#### question1  
-answer1  
-
-#### question2  
-answer2  
-
 ### Usage instructions
 
-You can point your browser to: *`http://Instance's Internet IP:9002`*  
+You can point your browser to: *`http://Instance's Internet IP:9001`*  
 
 The following is the information that may be needed during use
 
@@ -99,14 +90,13 @@ By default, the available users are:
 
 | Username    | Password |
 | ------- | -------- |
-|  admin | 123456  |
+|  admin | password  |
 
 #### Services and Ports
 
 | Service | Port | Use |  Necessity |
 | --- | --- | --- | --- |
-| onlyoffice-server | 9002 | Web-GUI database management tool | Y |
-| phpmyadmin | 9090 | Web-GUI database management tool | Y |
+| espocrm | 9001 | Access to EspoCRM by browser | Y |
 ## Documentation
 
 [ONLYOFFICE Administrator Guide](https://support.websoft9.com/docs/template)
