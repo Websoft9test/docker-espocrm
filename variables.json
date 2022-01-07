@@ -1,6 +1,6 @@
 {
-  "name": "template",
-  "trademark": "ONLYOFFICE",
+  "name": "espocrm",
+  "trademark": "EspoCRM",
   "installpath": "/data/wwwroot/espocrm",
   "compose_file": "docker-compose.yml",
   "fork_url": "https://github.com/espocrm/espocrm-docker",
@@ -11,7 +11,7 @@
     "memory": "1",
     "disk": "20",
     "swap": "2",
-    "url": "https://docs.espocrm.com/administration/server-configuration/"
+    "url": "https://docs.espocrm.com/administration/installation-by-script/"
   },
 
   "user": {
@@ -26,13 +26,6 @@
       "description_cn": "浏览器访问 EspoCRM",
       "description_en": "Access to EspoCRM by browser",
       "required": "Y"
-    }
-  ],
-
-  "command_comments":[
-    {
-      "comment_cn": ".env文件的SITE_NAME需要修改成公网IP或者域名才能被外网访问",
-      "comment_en": ".env file's [SITE_NAME] should  be changed to public IP or domain name to be accessed by Internet"
     }
   ]
 
