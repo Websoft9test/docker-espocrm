@@ -1,7 +1,7 @@
 {
   "name": "espocrm",
   "trademark": "EspoCRM",
-  "installpath": "/data/wwwroot/espocrm",
+  "installpath": "/data/apps/espocrm",
   "compose_file": "docker-compose.yml",
   "fork_url": "https://github.com/espocrm/espocrm-docker",
   "env_file": ".env",
