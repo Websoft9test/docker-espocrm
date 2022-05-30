@@ -60,7 +60,7 @@ services:
       
 networks:
   default:
-      name: ${APP_NETWORK}
+      name: ${APP_NAME}
       
 volumes:
   mysql:
